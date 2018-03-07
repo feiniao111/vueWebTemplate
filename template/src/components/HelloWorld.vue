@@ -95,7 +95,7 @@
       return {
         msg: this.t('comp.HelloWorld.msg')
       }
-    }
+    },
   }
 </script>
 

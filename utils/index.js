@@ -73,7 +73,7 @@ exports.printMessage = function printMessage(data, { green, yellow }) {
 To get started:
 
   ${yellow(
-    `${data.inPlace ? '' : `cd ${data.destDirName}\n  `}${installMsg(
+    `${data.inPlace ? '' : `  cd ${data.destDirName}\n  `}${installMsg(
       data
     )}${lintMsg(data)}
     npm i poseidon-ui -S --registry http://172.21.149.137:4873\n  

@@ -2,7 +2,14 @@
 <template>
     <div class="pageDemo1">
         <helloworld></helloworld>
-        <div>vuex变量{{getPageDemo1Value}}</div>
+        <h3>
+            vuex变量
+            <span>{{getPageDemo1Value}}</span>
+        </h3>
+        <h3>
+            mock请求
+            <button @click="req()">请求文件内容</button>
+        </h3>
     </div>
 </template>
 
@@ -25,6 +32,18 @@
             ...mapGetters([
                 "getPageDemo1Value"
             ])
+        },
+        methods: {
+            req() {
+                $.ajax({
+                    url: "/rj/frontend/src/3rdparty/common.js",
+                    async: true,
+                    success: function(ret){
+                        alert(ret);
+                    },
+                    type: 'GET'
+                });
+            }
         }
     }
 </script>
