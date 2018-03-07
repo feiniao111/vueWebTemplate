@@ -1,0 +1,11 @@
+@charset "utf-8";
+[class^="rj-icon-"],
+[class*=" rj-icon-"] {
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.rj-icon-vue-logo{
+  background: url(./img/logo.png);
+  width: 200px;
+  height: 200px;
+}

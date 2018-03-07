@@ -1,0 +1,18 @@
+'use strict'
+const merge = require('webpack-merge')
+const prodEnv = require('./prod.env')
+
+module.exports = merge(prodEnv, {
+  NODE_ENV: '"development"',
+  // TARGETSERVER: 'http://172.21.116.201:9001',
+  TARGETSERVER: 'http://172.21.149.139:9001',
+  // TARGETSERVER: 'http://127.0.0.1:9001',
+  // TARGETSERVER: 'http://172.21.5.12:9001',
+  LOACALSERVER: 'http://127.0.0.1:8081',
+  TARGETWEBROOT: '/rj',
+  // COOKIEREMOTEDOMIN:"172.21.116.201:9001",
+  COOKIEREMOTEDOMIN:"172.21.149.139:9001",
+  // COOKIEREMOTEDOMIN:"127.0.0.1:9001",
+  // TARGETSERVER: 'http://172.21.5.12:9001',
+  COOKIELOCALDOMIN:"127.0.0.1:8081"
+})
