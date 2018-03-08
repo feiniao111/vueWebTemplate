@@ -2,9 +2,11 @@
 <template>
   <div class="hello">
     <i class="rj-icon-vue-logo"></i>
-    <h1>{{ msg }}</h1>
+    <h1>\{{ msg }}</h1>
     <h2>Essential Links</h2>
     <h3>HelloWorld组件包含了国际化使用例子</h3>
+    <input type="radio" value="0" name="lang" @click="chose('chn')" checked>中文
+    <input type="radio" value="1" name="lang" @click="chose('en')">En
     <ul>
       <li>
         <a
@@ -87,15 +89,25 @@
 </template>
 
 <script>
-  import Locale from '../lib/mixins/locale'
   export default {
     name: 'HelloWorld',
-    mixins: [Locale],
     data () {
       return {
-        msg: this.t('comp.HelloWorld.msg')
       }
     },
+    computed: {
+      msg() {
+        return this.$t('comp.HelloWorld.msg');
+      }
+    },
+    methods: {
+      chose(lang) {
+        if(lang != 'chn' && lang != 'en'){
+          return;
+        }
+        this.$i18n.locale=lang;
+      }
+    }
   }
 </script>
 

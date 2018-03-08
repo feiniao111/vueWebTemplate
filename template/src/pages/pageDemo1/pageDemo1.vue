@@ -14,13 +14,11 @@
 </template>
 
 <script>
-    import Locale from '@/lib/mixins/locale'
     import helloworld from '@/components/HelloWorld.vue'
     import {mapGetters} from 'vuex'
 
     export default {
         name: 'pageDemo1',
-        mixins: [Locale],
         components:{
             helloworld
         },
